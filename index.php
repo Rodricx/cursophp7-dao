@@ -28,8 +28,28 @@ echo json_encode($busca);*/
 
 
 // Carrega usuário usando o login e a senha
-$usuario = new Usuario();
+/*$usuario = new Usuario();
 $usuario->login("Henrique", "Pembele");
+echo $usuario;*/
+
+
+
+// INSERT EM DAO
+/*
+$aluno = new Usuario("aluno", "@lun0");
+$aluno->setDesLogin("aluno");
+$aluno->setDesSenha("@lun0");
+
+$aluno->insert();
+
+echo $aluno;
+*/
+
+$usuario = new Usuario();
+$usuario->loadById(6);
+$usuario->delete();
+
 echo $usuario;
+
 
 ?>
